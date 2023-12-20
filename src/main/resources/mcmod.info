@@ -1,16 +1,16 @@
 [
   {
-    "modid": "forgetemplate",
-    "name": "ForgeTemplate",
-    "description": "An example template",
+    "modid": "${id}",
+    "name": "${name}",
+    "description": "guys i found the button",
     "version": "${version}",
-    "mcversion": "${mcversion}",
+    "mcversion": "1.8.9",
     "url": "",
     "updateUrl": "",
     "authorList": [
-      ""
+      "Microcontrollers"
     ],
-    "credits": "",
+    "credits": "Thanks to Hytils and NotEnoughUpdates for most of the code used.",
     "logoFile": "",
     "screenshots": [],
     "dependencies": []

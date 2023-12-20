@@ -27,10 +27,10 @@ public class SkullEsp {
         if (!Config.enableSkulls) return;
         for (TileEntity entity : Minecraft.getMinecraft().theWorld.loadedTileEntityList) {
             if (entity instanceof TileEntitySkull) {
-                //if (((TileEntitySkull) entity).getPlayerProfile() != null && ((TileEntitySkull) entity).getPlayerProfile().getName() != null && ((TileEntitySkull) entity).getPlayerProfile().getName().equals("§item")) {
+                if (((TileEntitySkull) entity).getPlayerProfile() != null && ((TileEntitySkull) entity).getPlayerProfile().getName() != null && ((TileEntitySkull) entity).getPlayerProfile().getName().equals("§item")) {
                     BlockPos pos = entity.getPos();
                     drawBoundingBox(event, pos);
-                //i w}
+                }
             }
         }
     }

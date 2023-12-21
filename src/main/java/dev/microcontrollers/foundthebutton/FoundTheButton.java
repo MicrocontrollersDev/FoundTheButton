@@ -1,5 +1,7 @@
 package dev.microcontrollers.foundthebutton;
 
+import dev.microcontrollers.foundthebutton.event.ChestEsp;
+import dev.microcontrollers.foundthebutton.event.PlayerEsp;
 import dev.microcontrollers.foundthebutton.event.SkullEsp;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -15,10 +17,11 @@ public class FoundTheButton {
     public static FoundTheButton INSTANCE;
     public static Config config;
 
-    // Register the config and commands.
     @Mod.EventHandler
     public void onInit(FMLInitializationEvent event) {
         config = new Config();
+        MinecraftForge.EVENT_BUS.register(new ChestEsp());
         MinecraftForge.EVENT_BUS.register(new SkullEsp());
+        MinecraftForge.EVENT_BUS.register(new PlayerEsp());
     }
 }
